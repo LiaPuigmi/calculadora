@@ -33,3 +33,87 @@ function initThemeSelector(){
 
 
 initThemeSelector();
+
+
+const display= document.getElementById('calculator-display') as HTMLInputElement;
+const buttons=document.getElementsByTagName('button');
+
+const buttonsArray=Array.from(buttons);
+
+buttonsArray.forEach((buttons)=>{
+    buttons.addEventListener('click', ()=>{
+        
+        const botonApretado=buttons.innerHTML;
+        console.log(botonApretado);
+        console.log(display.innerHTML);
+        if(buttons.id==='c'){
+            display.innerHTML='0';
+            return;
+        }
+
+        if(buttons.id==='del'){
+            if(display.innerHTML.length===1 || display.innerHTML==='Error'){
+                display.innerHTML='0';
+            }else{
+                display.innerHTML=display.innerHTML.slice(0,-1);
+
+            }
+            return;
+        }
+
+        if(buttons.id==='igual'){
+            try{
+                display.innerHTML=eval(display.innerHTML);
+            }catch{
+                display.innerHTML='Error';
+            }
+            return;
+        }
+
+        if(display.innerHTML==='0' || display.innerHTML==='Error'){
+            display.innerHTML=botonApretado;
+        }else{
+            display.innerHTML+=botonApretado;
+        }
+        
+
+    });
+});
+
+
+
+
+function calculadora(buton:HTMLButtonElement, display:HTMLInputElement){
+    switch(buton.innerHTML){
+        case 'DEL':
+            borrarUltimo(display);
+            break;
+        case 'RESET':
+            borrar(display);
+            break;
+        case '=':
+            calcular(display);
+            break;
+        default:
+            actualizar(display, buton);
+            break;
+    }
+}
+
+function calcular(display: HTMLInputElement){
+    display.innerHTML=eval(display.innerHTML);
+}
+function actualizar(display:HTMLInputElement, buton:HTMLButtonElement){
+    if(display.innerHTML== '0'){
+        display.innerHTML='';
+    }
+    display.innerHTML+=buton.innerHTML;
+}
+
+function borrar(display:HTMLInputElement){
+    display.innerHTML='0';
+}
+
+function borrarUltimo(display:HTMLInputElement){
+    display.innerHTML='0';
+}
