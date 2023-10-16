@@ -1,0 +1,21 @@
+:root{
+    --main-background-color: hsl(268, 75%, 9%);
+    --toggle-background-color: hsl(268, 71%, 12%);
+    --screen-background-color: hsl(268, 71%, 12%);
+
+    --borrar-key-background: hsl(281, 89%, 26%);
+    --borrar-key-shadow: hsl(285, 91%, 52%);
+    --borrar-key-activate: hsl(281, 97%, 73%);
+    --igual-key-background: hsl(176, 100%, 44%);
+    --igual-key-shadow: hsl(177, 92%, 70%);
+    --igual-key-activate: hsl(176, 100%, 80%);
+    --number-key-background: hsl(268, 47%, 21%);
+    --number-key-shadow: hsl(290, 70%, 36%);
+    --number-key-background: hsl(268, 68%, 76%);
+
+    --text-color-extra: hsl(52, 100%, 62%);
+    --text-color-igual: hsl(198, 20%, 13%);
+    --text-color-borrar: hsl(0, 0%, 100%);
+    --text-color-numbers: hsl(52, 100%, 62%);
+
+}

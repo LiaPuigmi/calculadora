@@ -1,0 +1,14 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "description": "![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 8436"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
