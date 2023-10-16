@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: hsl(222, 26%, 31%);
+}
+
+.calculadora{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora .theme{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.calculadora .theme .letters{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+    font-family: 'League Spartan', sans-serif;
+    
+}
+
+.calculadora .theme .theme_what{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.calculadora .theme .theme_what .letters{
+    color: hsl(0, 0%, 100%);
+    font-size: 0.8rem;
+    font-family: 'League Spartan', sans-serif;
+    margin: 5px;
+}
+
+.calculadora .theme .theme_what .slider{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 25%;
+}
+
+.calculadora .theme .theme_what .columna{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.calculadora .theme .theme_what .sliderFinal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+input{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    outline: none;
+    overflow: hidden;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+    background: hsl(224, 36%, 15%);
+
+}
+
+input::-webkit-slider-runnable-track {
+    height: 15px;
+    background: hsl(224, 36%, 15%);
+    border-radius: 5px;
+  }
+
+  input::-moz-range-track {
+    height: 15px;
+    background: hsl(224, 36%, 15%);
+    border-radius: 16px;
+  }
+
+  input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 15px;
+    width: 15px;
+    background-color: #f50;
+    border-radius: 50%;
+    border: 2px solid hsl(224, 36%, 15%);
+    box-shadow: -407px 0 0 400px hsl(224, 36%, 15%);
+  }
+  
+ input::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid hsl(224, 36%, 15%);
+    box-shadow: -407px 0 0 400px hsl(224, 36%, 15%);
+  }
+
+input:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+.calculadora .pantalla{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 10px;
+    height: 15vh;
+    background-color: hsl(224, 36%, 15%);
+}
+
+.calculadora .main_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: hsl(223, 31%, 20%);
+}
+
+.calculadora .main_container .column{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    padding: 10px;
+    width: 100%;
+    height: 10vh;
+}
+
+.calculadora .main_container .column button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    opacity: 0.8;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.calculadora .main_container .column .borrar:hover{
+    cursor: pointer;
+    opacity: 1;
+    background-color: hsl(223, 100%, 83%);
+}
+
+.calculadora .main_container .column .number:hover{
+    cursor: pointer;
+    opacity: 1;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.calculadora .main_container .column .igual:hover{
+    cursor: pointer;
+    opacity: 1;
+    background-color: hsl(6, 100%, 70%);
+}
+
+.calculadora .main_container .column .number{
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 2px 2px 2px hsl(28, 16%, 65%);
+    border-radius: 10px;
+    color: hsl(221, 14%, 31%);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.calculadora .main_container .column .borrar{
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 2px 2px 2px hsl(224, 28%, 35%);
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.calculadora .main_container .column .igual{
+    background-color: hsl(6, 83%, 43%);
+    box-shadow: 2px 2px 2px hsl(6, 70%, 34%);
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
