@@ -43,7 +43,7 @@ const buttonsArray=Array.from(buttons);
 buttonsArray.forEach((buttons)=>{
     buttons.addEventListener('click', ()=>{
         
-        const botonApretado=buttons.innerHTML;
+        let botonApretado=buttons.innerHTML;
         console.log(botonApretado);
         console.log(display.innerHTML);
         if(buttons.id==='c'){
@@ -73,6 +73,9 @@ buttonsArray.forEach((buttons)=>{
         if(display.innerHTML==='0' || display.innerHTML==='Error'){
             display.innerHTML=botonApretado;
         }else{
+            if(botonApretado==='x'){
+                botonApretado='*';
+            }
             display.innerHTML+=botonApretado;
         }
         
